@@ -1,12 +1,12 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#caf0f8";
+var systemBackgroundColor = "#fff3b5";
 var systemLineColor = "#000090";
 var systemBoxColor = "#00c800";
 
 /* internal constants */
-const darkBlue  = "#0077b6";
-const lightBlue  = "#90e0ef";
-const strokeColor  = "#03045e";
+const darkGreen  = "#9dcc76";
+const lightGreen  = "#ccfca4";
+const strokeColor  = "#899633";
 
 /*
  * Draw the letter given the letterData
@@ -25,11 +25,16 @@ function drawLetter(letterData) {
   let pos2x = 50  + letterData["offsetx"];
   let pos2y = 150 + letterData["offsety"];
 
-  // draw two circles
-  fill(darkBlue);
-  ellipse(50, 150, 75, 75);
-  fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size2);
+  // draw shapes
+  // rect
+  fill(darkGreen);
+  rect(20, 100, 75, 75);
+  //line 
+  fill(lightGreen);
+  // ellipse(pos2x, pos2y, size2, size2);
+  rect(pos2x, pos2y, size2, size2);
+  //quad-diamond
+  quad(50, 62, 71, 50, 50, 38, 28, 50); 
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
