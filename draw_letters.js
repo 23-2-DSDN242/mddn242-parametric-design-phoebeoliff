@@ -22,8 +22,8 @@ function drawLetter(letterData) {
 
   // determine parameters for second circle
   let size2 = letterData["size"];
-  let pos2x = 50  + letterData["offsetx"];
-  let pos2y = 150 + letterData["offsety"];
+  let pos2x = 35  + letterData["offsetx"];
+  let pos2y = 100 + letterData["offsety"];
 
   // draw shapes
   // rect
@@ -33,8 +33,10 @@ function drawLetter(letterData) {
   fill(lightGreen);
   // ellipse(pos2x, pos2y, size2, size2);
   rect(pos2x, pos2y, size2, size2);
+fill(darkGreen);
+ellipse(pos2x, pos2y, 50, 50);
   //quad-diamond
-  quad(50, 62, 71, 50, 50, 38, 28, 50); 
+  // quad(50, 62, 71+20, 50, 50, 38, 28-20, 50); 
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
